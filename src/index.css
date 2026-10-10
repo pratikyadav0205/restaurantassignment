@@ -1,0 +1,130 @@
+:root {
+  --ink: #14302e;
+  --ink-soft: #4d6563;
+  --paper: #eef2ef;
+  --card: #ffffff;
+  --line: #d5dfdb;
+  --berry: #a3213f;
+  --font-body: 'Instrument Sans', system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.header__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+}
+
+.header__subtitle {
+  margin: 0.5rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(20, 48, 46, 0.1);
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+  padding: 1.1rem 1.25rem 1.4rem;
+}
+
+.card__badges {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.card__title {
+  margin: 0.25rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.card__address {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.card__description {
+  display: -webkit-box;
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge--cuisine {
+  background: var(--ink);
+  color: #fff;
+}
+
+.badge--price {
+  color: var(--berry);
+  border: 1.5px solid var(--berry);
+}
+
+.rating {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
